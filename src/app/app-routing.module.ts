@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'accueil', component:AccueilComponent},
   {path:'probleme', component:ProblemeComponent},
   {path:'', redirectTo:'accueil', pathMatch:'full'},
-  {path:'**', redirectTo:'accueil', pathMatch:'full'}, //si la route est inexsistante redicrect sur accueil
+  {path:'**', redirectTo:'accueil', pathMatch:'full'}, //si la route est inexistante redirect sur accueil
 ];
 
 @NgModule({

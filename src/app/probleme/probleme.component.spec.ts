@@ -43,11 +43,11 @@ describe('ProblemeComponent', () => {
     expect(zone.valid).toBeTruthy();
   });
 
-  // it('Zone PRÉNOM valide avec 3 caractères', () =>{
-  //   let errors = {};
-  //   let zone = component.problemeForm.get('prenom');
-  //   zone.setValue('a'.repeat(3));
-  //   errors = zone.errors || {};
-  //   expect(errors['minlength']).toBeFalsy();
-  // })
+  it('Zone PRÉNOM invalide avec aucune valeur', () =>{
+    let errors = {};
+    let zone = component.problemeForm.get('prenom');
+    zone.setValue('');
+    errors = zone.errors || {};
+    expect(errors['required']).toBeTruthy();
+  })
 });
